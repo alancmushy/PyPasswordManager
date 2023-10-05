@@ -1,0 +1,132 @@
+body{
+  background: linear-gradient( #282c34, transparent);
+  background-color:black ;
+  background-attachment: fixed;
+  color: #90ee90;
+}
+.App {
+  text-align: center;
+}
+
+@font-face {
+  font-family: "aileron";
+  src: url('./fonts/Aileron-SemiBold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "aileronLight";
+  src: url('./fonts/Aileron-Light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "aileronHeavy";
+  src: url('./fonts/Aileron-Heavy-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Jost-SemiBold";
+  src: url('./fonts/Jost-SemiBold.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Jost-Regular";
+  src: url('./fonts/Jost-Regular.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Jost-Bold";
+  src: url('./fonts/Jost-Bold.ttf') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+p{
+  font-family: "Jost-Regular";
+}
+
+Label{
+  font-family: "Jost-Regular";
+}
+
+h2{
+  font-family: "Jost-SemiBold";
+  font-weight: normal;
+}
+
+h1{
+  font-family: "Jost-Bold";
+  font-weight: bold;
+}
+
+.buttonTemplate{
+  background-color:#90ee90;
+  color:#282c34;
+  font-size: 20px;
+  padding: 10px 60px;
+  border-radius: 15px;
+  margin: 10px 0px;
+  cursor: pointer;
+  font-family: "Jost-SemiBold";
+  font-weight: normal;
+
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.titleWidget{
+  float: left;
+  width: 50%;
+  
+}
+
+
+.loginWidget{
+  background-color:black ;
+  border-radius: 20px;
+  padding: 20px;
+  width: 150px;
+  height: 450px;
+  
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
