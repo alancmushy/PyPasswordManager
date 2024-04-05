@@ -1,6 +1,5 @@
 body{
-  background: linear-gradient( #282c34, transparent);
-  background-color:black ;
+  background-color:#1a212e ;
   background-attachment: fixed;
   color: #90ee90;
 }
@@ -111,11 +110,17 @@ h1{
 
 
 .loginWidget{
-  background-color:black ;
-  border-radius: 20px;
+  border-style: solid;
+  border-width: 0.05em;
+  border-color: #9aa4b4;
+  position: absolute;
+  background-color:#252e3e;
+  border-radius: 5px;
   padding: 20px;
-  width: 150px;
-  height: 450px;
+  width: 120px;
+  height: 400px;
+  top: 20%;
+  left: 30%;
   
 }
 
