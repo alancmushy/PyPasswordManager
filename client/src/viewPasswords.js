@@ -5,6 +5,7 @@ import { ReactComponent as Logo } from './media/ShieldPass.svg'
 
 function viewPasswords(){
       const [data, setData] = useState([{}])
+      
       useEffect(()=>{
             fetch("/passwords").then(
                res => res.json()

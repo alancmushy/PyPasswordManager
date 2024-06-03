@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState, useEffect, Component} from 'react'
 import { redirect, useNavigate } from 'react-router-dom';
 import './App.css'
 import { ReactComponent as Logo } from './media/ShieldPass.svg'
@@ -9,7 +9,7 @@ function LogIn(){
    const [data, setData] = useState([{}])
    const [username, setUsername] = useState([{}])
    const [password, setPassword] = useState([{}])
-   
+   const navigate = useNavigate()
 
 
    useEffect(()=>{
@@ -32,7 +32,8 @@ function LogIn(){
          })
          .then((res) => {
             if(res.data === "True"){
-               useNavigate(`/passwords/${username}`)
+               console.log(username)
+               navigate(`/passwords/${username}`)
             }
             else{
                console.log(":(((")

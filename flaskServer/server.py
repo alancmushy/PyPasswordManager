@@ -7,6 +7,7 @@ app = Flask(__name__)
 connection = sqlite3.connect('passwordDatabase.db', check_same_thread=False)
 connCursor = connection.cursor()
 
+loggedInUser = ""
 
 @app.route('/homepage', methods=['POST'])
 def logIn():
@@ -22,9 +23,14 @@ def logIn():
                    WHERE userName=?
                        AND pass_word=?""",
                 (username, password)).fetchone()
+    
+    
     if result:
         print("User and Password Found")
+        loggedInUser = username
+        print("The logged on user is " + loggedInUser)
         return jsonify("True")
+        
     
         
     else:  
@@ -35,14 +41,20 @@ def logIn():
 def home():
     return {"title":["ShieldPass"]} 
 
-@app.route('/passwords/{username}',methods=["GET"])
+@app.route('/passwords/{loggedInUser}',methods=["GET"])
 def passwords():
     return {"Test":["Test"]}
 
-@app.route('/passwords/{username}',methods=['POST'])
+@app.route('/passwords/{loggedInUser}',methods=['POST'])
 def displayPasswords():
-    return {"Test":["Test"]}
 
+    resultList = [connCursor.execute("""SELECT passwordWebsite,passwordText
+                   FROM usersPasswords
+                   WHERE userName=?""",
+                (loggedInUser)).fetchall()]
+
+     
+    print(resultList)
 
 if __name__ == "__main__":
     app.run(debug=True)
